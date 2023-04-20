@@ -36,7 +36,7 @@ participant db as Storage
     else Credentials found
         account->>-web: Successfully logged in
 
-        Note over web,db: When the user is authenticated, they can now submit new posts
+        Note over web,mail: When the user is authenticated, they can now submit new posts
         web->>+blog: Submit new post
         blog->>db: Store post data
 
